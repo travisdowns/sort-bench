@@ -16,7 +16,6 @@
 
 #include "simple-timer.hpp"
 
-
 inline uint64_t random_range(uint64_t range) {
     // Fast Random Integer Generation in an Interval,  
     // ACM Transactions on Modeling and Computer Simulation 29 (1), 2019
@@ -65,19 +64,22 @@ const size_t range_max = 40000000000ull;
 void bench_one(const sort_algo& algo, const uint64_t* input, uint64_t* buffer, size_t size) {
     // assert(!is_sorted(input, size));
 
-    clock_t before, after;
-
+    // clock_t before, after;
+    int64_t elapsed;
     for (int i = 0; i < repeats; i++) {
       std::copy(input, input + size, buffer);
       
-      before = clock();
+      // before = clock();
+      SimpleTimer timer;
       algo.fn(buffer, size);
-      after  = clock();
+      elapsed = timer.elapsedNanos();
+      // after  = clock();
     }
 
     assert(is_sorted(buffer, size));
 
-    printf(",%*.1f", (int)strlen(algo.name), (after - before) * 1000000000. / size / CLOCKS_PER_SEC);
+    // printf(",%*.1f", (int)strlen(algo.name), (after - before) * 1000000000. / size / CLOCKS_PER_SEC);
+    printf(",%*.1f", (int)strlen(algo.name), (double)elapsed / size);
 
 }
 
