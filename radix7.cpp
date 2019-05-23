@@ -57,7 +57,7 @@ void radix_sort7(uint64_t *a, size_t count)
     count_frequency(a, count, freqs);
 
     uint64_t *from = a, *to = queue_area.get();
-    
+
     for (size_t pass = 0; pass < RADIX_LEVELS; pass++) {
 
         if (is_trivial(freqs[pass], count)) {
@@ -81,7 +81,7 @@ void radix_sort7(uint64_t *a, size_t count)
             size_t value = from[i];
             size_t index = (value >> shift) & RADIX_MASK;
             *queue_ptrs[index]++ = value;
-            __builtin_prefetch(queue_ptrs[index]);
+            __builtin_prefetch(queue_ptrs[index] + 1);
         }
 
         // swap from and to areas
