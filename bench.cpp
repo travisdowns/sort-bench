@@ -1,20 +1,18 @@
 #include "common.hpp"
+#include "wyhash.h"
+#include "simple-timer.hpp"
 
-#include <math.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <assert.h>
-#include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
+
 #include <algorithm>
 #include <vector>
-#include <assert.h>
-#include "wyhash.h"
-#include "huge-alloc.hpp"
-
-#include "simple-timer.hpp"
+#include <memory>
 
 inline uint64_t random_range(uint64_t range) {
     // Fast Random Integer Generation in an Interval,  

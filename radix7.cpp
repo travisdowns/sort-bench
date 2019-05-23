@@ -1,6 +1,5 @@
 #include "common.hpp"
 #include "hedley.h"
-#include "huge-alloc.hpp"
 
 #include <algorithm>
 #include <memory>
