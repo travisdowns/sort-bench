@@ -10,6 +10,10 @@ Currently it builds on Linux with clang or gcc, or on Windows Subsystem for Linu
 
 In principle it could work fine on Windows with other compilers, but I haven't had time to sort out my Visual Studio Community license.
 
+It should work on OSX with clang or gcc, although I haven't tried it.
+
+Patches which add platform support are welcome.
+
 ## Running
 
 Run it like `./bench` to run all the benchmarks, or like `./bench BENCH_NAME` to run a specific benchmark (e.g., `./bench qsort` to run the qsort benchmark). The benchmark names are the same as those shown in the first row when you run `./bench`.
