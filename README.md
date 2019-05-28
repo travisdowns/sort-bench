@@ -1,6 +1,6 @@
 ## What is it?
 
-This a sort benchmark in support of this related (TODO: link) blog post.
+This a sort benchmark in support of [this related blog post](https://travisdowns.github.io/blog/2019/05/22/sorting.html).
 
 ## Building
 
