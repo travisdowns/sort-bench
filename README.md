@@ -26,4 +26,8 @@ First generate the data by running `scripts/data.sh`. This updates the CSV file 
 
 Then you can generate all the figures by running `scripts/allfigs.sh`. This generates the .svg figures in `figures`. You can also generate any figure directly by calling say `scripts/fig2.sh` to generate Figure 2 (which by default opens an interactive window to display the figure).
 
+## Acknowledgements
 
+Some code in the `bench.cpp` and `wyhash.h` originates from [this code](https://github.com/lemire/Code-used-on-Daniel-Lemire-s-blog/tree/master/2019/05/07) written by Daniel Lemire for a [blog post](https://lemire.me/blog/2019/05/07/almost-picking-n-distinct-numbers-at-random/).
+
+[wyhash](https://github.com/wangyi-fudan/wyhash) courtesy of Wang Yi.
